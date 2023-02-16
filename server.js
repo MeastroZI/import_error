@@ -18,11 +18,11 @@ const server = http.createServer((req, res) => {
     
     res.writeHead(200, { "Content-type": "text/html" });
     
-    console.log(res.getHeader("Content-type"))
+    // console.log(res.getHeader("Content-type"))
     filepath = path.join(__dirname, "static", "index.html");
   }
   res.on('finish' , ()=>{
-    console.log("i am finished ")
+    // console.log("i am finished ")
   })
 
   fs.readFile(filepath, (err, data) => {
